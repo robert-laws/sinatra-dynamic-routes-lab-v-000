@@ -7,4 +7,12 @@ class App < Sinatra::Base
     new_name = @name.reverse
     "#{new_name}"
   end
+
+  get "/square/:number" do
+    @number = params[:number].to_i
+    val = @number * @number
+    "#{val}"
+  end
+
+  
 end
